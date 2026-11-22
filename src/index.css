@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-handwriting: "Caveat", cursive;
+
+  /* Palette: Deep Aubergine, Liquid Silver, and Marigold */
+  --color-aubergine-950: #0a0312;
+  --color-aubergine-900: #140722;
+  --color-aubergine-800: #200c35;
+  --color-aubergine-700: #30134e;
+  --color-aubergine-600: #461b6f;
+
+  --color-silver-100: #f8fafc;
+  --color-silver-200: #e2e8f0;
+  --color-silver-300: #cbd5e1;
+  --color-silver-400: #94a3b8;
+  --color-silver-500: #64748b;
+
+  --color-marigold-300: #fef08a;
+  --color-marigold-400: #fcd34d;
+  --color-marigold-500: #fbbf24;
+  --color-marigold-600: #f59e0b;
+  --color-marigold-700: #d97706;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0a0312;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* 3D Perspective Utilities */
+.perspective-800 {
+  perspective: 800px;
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
+.perspective-1500 {
+  perspective: 1500px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Metallic silver & marigold shimmer */
+@keyframes metallicSheen {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.silver-metallic-glow {
+  box-shadow: 0 0 25px rgba(226, 232, 240, 0.15), 0 0 50px rgba(70, 27, 111, 0.4);
+}
+
+.marigold-glow {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 45px rgba(251, 191, 36, 0.15);
+}
+
+.silver-border-gradient {
+  border-image: linear-gradient(135deg, #f8fafc, #94a3b8, #fbbf24, #cbd5e1) 1;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0312;
+}
+::-webkit-scrollbar-thumb {
+  background: #30134e;
+  border-radius: 9999px;
+  border: 1px solid rgba(226, 232, 240, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #461b6f;
+}
+
+/* 3D floating animation */
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotateX(4deg) rotateY(-4deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float3D 6s ease-in-out infinite;
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}

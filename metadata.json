@@ -1,0 +1,6 @@
+{
+  "name": "A Little Surprise, Just For Susti",
+  "description": "A magical 7-layer interactive birthday surprise website made with love for Srushti (Susti).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
